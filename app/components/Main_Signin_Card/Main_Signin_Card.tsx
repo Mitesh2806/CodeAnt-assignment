@@ -1,12 +1,6 @@
 'use client';
 import Image from "next/image";
-import AntMain from '@/public/SigninAnt-1.svg';
 import { useState } from "react";
-import Github from '@/public/Github.svg';
-import Bitbucket from '@/public/Bitbucket.svg';
-import Azure from '@/public/Azure.svg';
-import Gitlab from '@/public/Gitlab.svg';
-import sso from '@/public/sso.svg';
 import Main_Button from '@/app/components/Main_Buttons/Main_Button';
 
 type ButtonData = {
@@ -19,14 +13,14 @@ export default function Signin_Card_Main() {
 
     const buttonData: Record<'SAAS' | 'Self Hosted', ButtonData[]> = {
         SAAS: [
-            { logoSrc: Github, option: 'Sign in with Github' },
-            { logoSrc: Bitbucket, option: 'Sign in with Bitbucket' },
-            { logoSrc: Azure, option: 'Sign in with Azure DevOps' },
-            { logoSrc: Gitlab, option: 'Sign in with GitLab' },
+            { logoSrc: '/Github.svg', option: 'Sign in with Github' },
+            { logoSrc: '/Bitbucket.svg', option: 'Sign in with Bitbucket' },
+            { logoSrc: '/Azure.svg', option: 'Sign in with Azure DevOps' },
+            { logoSrc: '/Gitlab.svg', option: 'Sign in with GitLab' },
         ],
         'Self Hosted': [
-            { logoSrc: sso, option: 'Sign in with SSO' },
-            { logoSrc: Gitlab, option: 'Self Hosted GitLab' },
+            { logoSrc: '/sso.svg', option: 'Sign in with SSO' },
+            { logoSrc: '/Gitlab.svg', option: 'Self Hosted GitLab' },
         ],
     };
 
@@ -43,11 +37,11 @@ export default function Signin_Card_Main() {
     };
 
     return (
-        <div className="md:w-[42em] w-[39em]  h-[37.64625em] bg-white rounded-xl border-[1px] border-gray-300 mx-4">
+        <div className="md:w-[42em] w-[39em] h-[37.64625em] bg-white rounded-xl border-[1px] border-gray-300 mx-4">
             <div className="container mx-1 mb-7 mt-9">
                 <div className="flex flex-row items-center justify-center">
                     <div className="flex items-center justify-center w-[201.38px] h-[40px] gap-[13.76px]">
-                        <Image src={AntMain} alt="CodeAnt" width={35.62} height={40} />
+                        <Image src="/SigninAnt-1.svg" alt="CodeAnt" width={35.62} height={40} />
                         <div style={{ fontFamily: 'Satoshi-Light, sans-serif' }}>CodeAnt AI</div>
                     </div>
                 </div>
@@ -73,8 +67,7 @@ export default function Signin_Card_Main() {
                 </button>
             </div>
 
-            
-            <div className="container mx-auto md:px-6 px-3 ">{renderOptions()}</div>
+            <div className="container mx-auto md:px-6 px-3">{renderOptions()}</div>
         </div>
     );
 }

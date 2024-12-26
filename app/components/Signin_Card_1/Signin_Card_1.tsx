@@ -74,7 +74,7 @@ export default function Signin_Card_1() {
             <div className=" flex absolute top-5 left-6">
             <div className="flex-shrink-0">
                 <Image 
-                    src={Ant1} 
+                    src='/SigninAnt-1.svg' 
                     alt="Ant1" 
                     width={28} 
                     height={31} 

@@ -1,0 +1,13 @@
+{
+    "SAAS": [
+      { "logoSrc": "./public/Github.svg", "option": "Sign in with Github" },
+      { "logoSrc": "./public/Github.svg", "option": "Sign in with Bitbucket" },
+      { "logoSrc": "./public/Azure.svg", "option": "Sign in with Azure DevOps" },
+      { "logoSrc": "./public/Gitlab.svg", "option": "Sign in with GitLab" }
+    ],
+    "Self Hosted": [
+      { "logoSrc": "./public/sso.svg", "option": "Sign in with SSO" },
+      { "logoSrc": "./public/Gitlab.svg", "option": "Self Hosted GitLab" }
+    ]
+  }
+  

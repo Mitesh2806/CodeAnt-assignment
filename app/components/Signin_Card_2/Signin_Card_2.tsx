@@ -1,6 +1,5 @@
 'use client';
 import Image from 'next/image';
-import Pie from '@/public/pie-chart.svg';
 import { motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
 
@@ -29,7 +28,7 @@ export default function Signin_Card_2() {
         <div className="w-[16.875em] h-[10.25em] rounded-xl drop-shadow-xl shadow-all-sides bg-white relative"> 
            <div className="flex items-center justify-between mx-6 pt-4">
                 <Image 
-                    src={Pie}
+                    src='/pie-chart.svg'
                     alt="Pie Chart"
                     width={56}
                     height={56}
