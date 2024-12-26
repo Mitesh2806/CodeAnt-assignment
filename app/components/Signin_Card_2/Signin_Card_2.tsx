@@ -25,7 +25,7 @@ export default function Signin_Card_2() {
     }, []);
     return (
         <> 
-        <div className="w-[16.875em] h-[10.25em] rounded-xl drop-shadow-xl shadow-all-sides bg-white relative"> 
+        <div className=" lg:w-[16.875em] lg:h-[10.25em] w-[14.875em] h-[10em] rounded-xl drop-shadow-xl shadow-all-sides bg-white relative"> 
            <div className="flex items-center justify-between mx-6 pt-4">
                 <Image 
                     src='/pie-chart.svg'
@@ -43,12 +43,12 @@ export default function Signin_Card_2() {
                     <div className="text-[12px] leading-[16px]">This week</div>
                 </div>
            </div>
-           <div className="flex flex-col items-center justify-center  absolute top-[88.19px] left-[33.83px]">
+           <div className="flex flex-col items-center justify-center  absolute top-[88.19px] left-[23.83px]">
             <div className=" leading-[20px] font-bold">Issues Fixed</div>
                <motion.span
                    initial={{ opacity: 0 }}
                    animate={{ opacity: 1 }}
-                   transition={{ duration: 2 }}
+                   transition={{ duration: 1 }}
                    className="text-[#171717] w-[108px] h-[32px] font-bold leading-[32px] text-[32px]"
                >
                    {issueCount}K+

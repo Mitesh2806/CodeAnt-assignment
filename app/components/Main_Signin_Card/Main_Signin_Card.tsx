@@ -1,6 +1,6 @@
 'use client';
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Main_Button from '@/app/components/Main_Buttons/Main_Button';
 
 type ButtonData = {
@@ -9,7 +9,7 @@ type ButtonData = {
 };
 
 export default function Signin_Card_Main() {
-    const [selectedType, setSelectedType] = useState<'SAAS' | 'Self Hosted' | null>(null);
+    const [selectedType, setSelectedType] = useState<'SAAS' | 'Self Hosted' | null>('SAAS'); // Default to 'SAAS'
 
     const buttonData: Record<'SAAS' | 'Self Hosted', ButtonData[]> = {
         SAAS: [
@@ -19,8 +19,9 @@ export default function Signin_Card_Main() {
             { logoSrc: '/Gitlab.svg', option: 'Sign in with GitLab' },
         ],
         'Self Hosted': [
-            { logoSrc: '/sso.svg', option: 'Sign in with SSO' },
             { logoSrc: '/Gitlab.svg', option: 'Self Hosted GitLab' },
+            { logoSrc: '/sso.svg', option: 'Sign in with SSO' },
+            
         ],
     };
 
@@ -28,7 +29,7 @@ export default function Signin_Card_Main() {
         if (!selectedType) return null;
 
         return (
-            <div className="flex flex-col gap-4 mt-6">
+            <div className="flex flex-col gap-4 mt-4 md:mt-6 ">
                 {buttonData[selectedType].map((button, index) => (
                     <Main_Button key={index} logoSrc={button.logoSrc} option={button.option} />
                 ))}
@@ -37,22 +38,23 @@ export default function Signin_Card_Main() {
     };
 
     return (
-        <div className="md:w-[42em] w-[39em] h-[37.64625em] bg-white rounded-xl border-[1px] border-gray-300 mx-4">
-            <div className="container mx-1 mb-7 mt-9">
+        
+        <div className="lg:w-[41em] w-auto h-[37.64625em] bg-white rounded-xl border-[1px] border-gray-300 ">
+            <div className="container mx-1 mb-7 mt-6 md:mt-9">
                 <div className="flex flex-row items-center justify-center">
                     <div className="flex items-center justify-center w-[201.38px] h-[40px] gap-[13.76px]">
                         <Image src="/SigninAnt-1.svg" alt="CodeAnt" width={35.62} height={40} />
                         <div style={{ fontFamily: 'Satoshi-Light, sans-serif' }}>CodeAnt AI</div>
                     </div>
                 </div>
-                <div className="mt-9 md:w-[368px] md:h-[48px] w-[350px] h-[42px] mx-auto">
-                    <div className="text-center font-semibold leading-[48px] md:text-[32px] text-[28px]">
+                <div className="mt-6 md:mt-9 w-[90%] mx-auto">
+                    <div className="text-center font-semibold leading-[40px] lg:text-[32px] md:text-[26px] sm:text-[24px] text-[20px]">
                         Welcome to CodeAnt AI
                     </div>
                 </div>
             </div>
 
-            <div className="container mx-auto w-[324px] h-[60px] border-gray-300 border-[1px] rounded-lg flex">
+            <div className="container mx-auto w-[90%] md:w-[324px] h-[60px] border-gray-300 border-[1px] rounded-lg flex">
                 <button
                     className="flex-1 flex items-center justify-center cursor-pointer hover:bg-[#1570EF] hover:text-white transition-colors rounded-lg"
                     onClick={() => setSelectedType('SAAS')}
@@ -67,7 +69,7 @@ export default function Signin_Card_Main() {
                 </button>
             </div>
 
-            <div className="container mx-auto md:px-6 px-3">{renderOptions()}</div>
+            <div className="container mx-auto md:px-6 px-3 mt-4">{renderOptions()}</div>
         </div>
     );
 }

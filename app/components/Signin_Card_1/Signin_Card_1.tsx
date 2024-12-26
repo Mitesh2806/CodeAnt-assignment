@@ -70,7 +70,7 @@ export default function Signin_Card_1() {
     }, []);
 
     return (
-        <div className=" w-[27.9375em] h-[10.625em] rounded-2xl shadow-all-sides drop-shadow-2xl bg-white relative ">
+        <div className=" flex items-center justify-center lg:w-[27.9375em] w-[25em] h-[10.625em]  rounded-2xl shadow-all-sides drop-shadow-2xl bg-white relative ">
             <div className=" flex absolute top-5 left-6">
             <div className="flex-shrink-0">
                 <Image 
@@ -87,7 +87,7 @@ export default function Signin_Card_1() {
             </div>
             <div className="h-[1px] bg-[#E6E8F0] w-full my-2 absolute top-[72px]"></div>
             <div className="flex items-center justify-around ">
-           <div className=" flex flex-col items-center justify-center  top-[94.5px] left-[20px] absolute">
+           <div className=" flex flex-col items-center justify-center  top-[94.5px] lg:left-[20px] md:left-[10px] absolute">
            
                     <motion.span
                         initial={{ opacity: 0 }}
@@ -100,7 +100,7 @@ export default function Signin_Card_1() {
                     <h1 className="text-[#171717] font-normal leading-[20px] text-[14px]">Language Support</h1>
                 
            </div>
-                <div className="flex flex-col items-center justify-center  top-[94.5px] left-[188.5px]   absolute">
+                <div className="flex flex-col items-center justify-center  top-[94.5px] lg:left-[188.5px] md:left-[178.5px]  absolute">
                 <motion.span
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
